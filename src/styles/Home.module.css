@@ -5,3 +5,12 @@
   display:grid;
   place-content: center;
 }
+.input{
+  padding:15px;
+  width: 300px;
+  outline: none;
+}
+.button{
+  padding:15px;
+  outline: none;
+}
