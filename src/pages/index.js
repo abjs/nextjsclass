@@ -6,7 +6,7 @@ export default function Home() {
     event.preventDefault();
     const data = event.target.todo.value;
     event.target.todo.value = "";
-    settodo([...todo,data]);
+    settodo([...todo, data]);
   };
   const [todo, settodo] = useState([]);
   return (
@@ -22,23 +22,12 @@ export default function Home() {
           Add Todo
         </button>
       </form>
-
-
-      {/* {
-        todo.map(function(data,index) {
-          return(
-            <h1 key={index} >{data}</h1>
-          )
-        })
-      } */}
-
-      {
-        todo.map((data,index)=><h1 key={index}>{data}</h1>)
-      }
-
-
-
-
+      {todo.map(function (data, index) {
+        return <h1 key={index}>{data}</h1>;
+      })}
+      {todo.map((data, index) => (
+        <h1 key={index}>{data}</h1>
+      ))}
     </div>
   );
 }
