@@ -11,6 +11,7 @@ export default function Home() {
     console.log(data);
     settodo([...todo, data]);
   };
+
   const [todo, settodo] = useState([]);
   return (
     <div className={styles.main}>
@@ -26,9 +27,10 @@ export default function Home() {
         </button>
       </form>
 
-      <Todo data={todo} />
-      <Staus/>
-
+      <div className={styles.todo}>
+        <Todo data={todo} />
+      </div>
+      <Staus />
     </div>
   );
 }

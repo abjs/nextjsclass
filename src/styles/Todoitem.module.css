@@ -1,0 +1,12 @@
+.main {
+  height: 10vh;
+  width: 30vw;
+  background: width;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  z-index: 1000;
+}
