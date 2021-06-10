@@ -1,3 +1,4 @@
+import Staus from "@/components/staus";
 import Todo from "@/components/todo";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
@@ -26,11 +27,7 @@ export default function Home() {
       </form>
 
       <Todo data={todo} />
-
-      <div>
-        <h1>Staus</h1>
-      </div>
-
+      <Staus/>
 
     </div>
   );
