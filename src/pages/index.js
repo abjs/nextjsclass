@@ -1,3 +1,4 @@
+import Todo from "@/components/todo";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 
@@ -6,12 +7,13 @@ export default function Home() {
     event.preventDefault();
     const data = event.target.todo.value;
     event.target.todo.value = "";
+    console.log(data);
     settodo([...todo, data]);
   };
   const [todo, settodo] = useState([]);
   return (
     <div className={styles.main}>
-      <form onSubmit={Submit}>
+      <form onSubmit={Submit} className={styles.form}>
         <input
           type="text"
           name="todo"
@@ -22,12 +24,14 @@ export default function Home() {
           Add Todo
         </button>
       </form>
-      {todo.map(function (data, index) {
-        return <h1 key={index}>{data}</h1>;
-      })}
-      {todo.map((data, index) => (
-        <h1 key={index}>{data}</h1>
-      ))}
+
+      <Todo data={todo} />
+
+      <div>
+        <h1>Staus</h1>
+      </div>
+
+
     </div>
   );
 }
