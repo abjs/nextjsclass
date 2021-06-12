@@ -8,11 +8,13 @@ export default function Home() {
     event.preventDefault();
     const data = event.target.todo.value;
     event.target.todo.value = "";
-    console.log(data);
     settodo([...todo, data]);
+    
   };
 
   const [todo, settodo] = useState([]);
+ 
+ 
   return (
     <div className={styles.main}>
       <form onSubmit={Submit} className={styles.form}>
